@@ -37,14 +37,13 @@
             <img  class="card-img-top" src="{{ selectedSerie.image }}" alt="{{ selectedSerie.nombre }}" />
             <h5 class="card-title">{{ selectedSerie.name }}</h5>
             <p class="card-text">{{ selectedSerie.description }}</p>
-
-            <!-- Display ranking -->
-            <p class="card-text">Ranking: {{ selectedSerie.rating }}</p>
+            <p class="card-text">Rating: {{ selectedSerie.rating }}</p>
           </div>
         </div>
       </div>
-
+      <p>
+        El restaurante con mejor puntuación es el <strong style="font-weight: bold;">{{ respuesta }}</strong> y tiene <strong style="font-weight: bold;">{{ promedio }}</strong> puntos.
+      </p>
       
-      <p>El restaurante con mejor puntuacion es el {{respuesta}} y tiene {{promedio}} puntos.</p>
   </div>
 </div>
