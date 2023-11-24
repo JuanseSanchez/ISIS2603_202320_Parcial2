@@ -19,7 +19,7 @@
                   <td>{{serie.country}}</td>
                   <td>{{serie.cuisine}}</td>
                   <td>
-                    <button md-raised-button color="primary" (click)="onClick(serie.name)">Abrir detalle</button>
+                    <button md-raised-button color="primary" (click)="onClick(serie)">Abrir detalle</button>
                 </tr>
               </tbody>
           </table>
@@ -34,9 +34,12 @@
             </button>
           </div>
           <div class="card-body">
-            
+            <img  class="card-img-top" src="{{ selectedSerie.image }}" alt="{{ selectedSerie.nombre }}" />
             <h5 class="card-title">{{ selectedSerie.name }}</h5>
-            <!-- Include other details as needed -->
+            <p class="card-text">{{ selectedSerie.description }}</p>
+
+            <!-- Display ranking -->
+            <p class="card-text">Ranking: {{ selectedSerie.rating }}</p>
           </div>
         </div>
       </div>
