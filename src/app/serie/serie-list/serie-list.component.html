@@ -14,12 +14,11 @@
               <tbody>
                 <tr *ngFor="let serie of series">
                   <td>{{serie.id}}</td>
-                  <td class="show-card">{{serie.name}}</td>
+                  <td>{{serie.name}}</td>
                   <td>{{serie.opening_year}}</td>
                   <td>{{serie.country}}</td>
                   <td>{{serie.cuisine}}</td>
-                  <td>
-                    <button md-raised-button color="primary" (click)="onClick(serie)">Abrir detalle</button>
+                    <button md-raised-button color="primary" (click)="onClick(serie)" class="show-card">Ver detalle</button>
                 </tr>
               </tbody>
           </table>
