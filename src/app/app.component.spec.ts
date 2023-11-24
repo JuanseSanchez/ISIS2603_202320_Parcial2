@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ISIS2603_202320_PARCIAL2'`, () => {
+  it(`should have as title 'series'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ISIS2603_202320_PARCIAL2');
+    expect(app.title).toEqual('series');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ISIS2603_202320_PARCIAL2 app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('series app is running!');
   });
 });
