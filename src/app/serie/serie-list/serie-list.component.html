@@ -5,21 +5,23 @@
               <thead>
                   <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Channel</th>
-                      <th scope="col">Seasons</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Fundación</th>
+                      <th scope="col">País</th>
+                      <th scope="col">Tipo de Comida</th>
                   </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let serie of series">
                   <td>{{serie.id}}</td>
                   <td class="show-card">{{serie.name}}</td>
-                  <td>{{serie.channel}}</td>
-                  <td>{{serie.seasons}}</td>
+                  <td>{{serie.opening_year}}</td>
+                  <td>{{serie.country}}</td>
+                  <td>{{serie.cuisine}}</td>
                 </tr>
               </tbody>
           </table>
       </div>
-      <p>Seasons average: {{promedio}}</p>
+      <p>El restaurante con mejor puntuacion es el {{respuesta}} y tiene {{promedio}} puntos.</p>
   </div>
 </div>

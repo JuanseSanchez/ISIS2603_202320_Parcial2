@@ -1,19 +1,23 @@
 export class Serie {
     id: number;
     name: string;
-    channel: string;
-    seasons: number;
+    opening_year: number;
+    country: string;
+    cuisine: string;
+    rating: number;
     description: string;
-    link: string;
     image: string;
 
-    constructor (id: number, name: string, channel: string, seasons: number, description: string, link: string, image: string) {
+    constructor(id: number, name: string, opening_year: number, country: string, cuisine: string, rating: number, description: string, image: string) {
         this.id = id;
         this.name = name;
-        this.channel = channel;
-        this.seasons = seasons;
+        this.opening_year = opening_year;
+        this.country = country;
+        this.cuisine = cuisine;
+        this.rating = rating;
         this.description = description;
-        this.link = link;
         this.image = image;
     }
+
+
 }

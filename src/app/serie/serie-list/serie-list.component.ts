@@ -12,6 +12,7 @@ import { SerieService } from '../serie.service';
 export class SerieListComponent implements OnInit {
   series: Array<Serie> = [];
   promedio: number = 0;
+  respuesta: string = '';
 
   constructor(private serieService: SerieService) { }
 
@@ -19,8 +20,12 @@ export class SerieListComponent implements OnInit {
     this.serieService.getSeries().subscribe((series) => {
       this.series = series;
       this.promedio = 0;
+      this.respuesta = '';
       this.series.forEach((serie) => {
-        this.promedio += serie.seasons / series.length;
+        if (serie.rating > this.promedio){
+          this.respuesta = serie.name;
+          this.promedio = serie.rating;
+        }
       });
     });
   }
