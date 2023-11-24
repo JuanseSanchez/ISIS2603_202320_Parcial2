@@ -14,6 +14,16 @@ export class SerieListComponent implements OnInit {
   promedio: number = 0;
   respuesta: string = '';
 
+  selectedSerie: any;
+
+  onClick(serie: any): void {
+    this.selectedSerie = serie;
+  }
+
+  closeDetailCard(): void {
+    this.selectedSerie = null;
+  }
+
   constructor(private serieService: SerieService) { }
 
   getSeries(): void {

@@ -18,10 +18,30 @@
                   <td>{{serie.opening_year}}</td>
                   <td>{{serie.country}}</td>
                   <td>{{serie.cuisine}}</td>
+                  <td>
+                    <button md-raised-button color="primary" (click)="onClick(serie.name)">Abrir detalle</button>
                 </tr>
               </tbody>
           </table>
       </div>
+
+      <div class="col-12 col-lg-6" *ngIf="selectedSerie">
+        <div class="card">
+          <div class="card-header">
+            Restaurant Detail
+            <button class="close" aria-label="Close" (click)="closeDetailCard()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="card-body">
+            
+            <h5 class="card-title">{{ selectedSerie.name }}</h5>
+            <!-- Include other details as needed -->
+          </div>
+        </div>
+      </div>
+
+      
       <p>El restaurante con mejor puntuacion es el {{respuesta}} y tiene {{promedio}} puntos.</p>
   </div>
 </div>
